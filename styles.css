@@ -1,0 +1,173 @@
+/*
+  ***
+  Don Mo
+  10/31/2025
+  CSE 154 AA Song, Oscar Shijie
+
+  This file is the stylesheet for my CP3 assignment. this file contains CSS rules to style my
+  index.html. It has a tan theme.
+  ***
+*/
+
+html {
+  background-color: blanchedalmond;
+  text-align: center;
+  display: table;
+}
+
+body {
+  width: 50%;
+  vertical-align: middle;
+  display: table-cell;
+}
+h1 {
+  font-family: "Playfair", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+h1, h2 {
+  background-color: rgb(128, 114, 181);
+  color: #fff8e7;
+  padding: 0.5rem 0.9rem;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  font-size: clamp(1.2rem, 2.6vw, 2.4rem);
+  margin: 0.25rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+h2 {
+  font-family: "Playfair", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+p {
+  background-color: blanchedalmond;
+  font-family: 'Courier New', "Courier", monospace;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  background-color: rgb(128, 114, 181);
+  color: #fff8e7;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-family: "Playfair", serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: rgb(108, 94, 161);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+  #flags {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1rem;
+    align-items: start;
+    padding: 1rem;
+    background: linear-gradient(180deg, rgba(255, 248, 231, 0.9), rgba(255, 255, 255, 0.6));
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    max-width: 100%;
+    margin: 0.75rem 0;
+    width: 75%;
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  /* Ensure children inside #flags behave predictably (override floats/widths) */
+  #flags .container {
+    float: none;
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+    padding: 8px;
+    display: block;
+  }
+
+
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 200px;
+  float: left;
+  padding: 6px;
+}
+
+footer {
+  clear: left;
+}
+/*#flags {
+  content: "";
+  /*clears floating objects
+  ie if there was leaft as clear then
+  the flags object would clear the left
+  part floaty so those floaties go
+  above
+  clear: both;
+}*/
+
+.image {
+  /*removes tiny whitespace that appears under
+  inline displays which is shitty*/
+  display: block;
+  /*fills all of container width of the
+  top container*/
+  height: 88px;
+  object-fit: scale-down;
+  width: 175px;
+}
+
+.overlay {
+  /*the hidden layer on top of image
+  allows it to sit inside .container,
+  overlapping image*/
+  position: absolute;
+  /*starts at the bottom edge of iamge*/
+  bottom: 0;
+  /* makes a transparant background*/
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1;
+  /*spans entire image width*/
+  width: 100%;
+  /*actual transition*/
+  transition: .5s ease;
+  /*starts invisible*/
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}

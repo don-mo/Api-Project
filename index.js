@@ -39,7 +39,7 @@
       shit.classList.add('container')
       let poop = gen('img');
       const base = '/API-project/';
-      poop.src = `${base}african-flags/` + exchangeRates.data['' + i].country + '.png';
+      poop.src = `${base}african-flags/` + exchangeRates.data['' + i].country.toLowerCase() + '.png';
       poop.alt = exchangeRates.data['' + i].country;
       poop.classList.add('image');
       shit.appendChild(poop);
@@ -78,7 +78,7 @@
       shit.classList.add('container');
       let poop = gen('img');
       const base = '/API-project/';
-      poop.src = `${base}african-flags/` + africaData['' + i].name + '.png';
+      poop.src = `${base}african-flags/` + africaData['' + i].name.toLowerCase() + '.png';
       poop.alt = africaData['' + i].name;
       poop.classList.add('image');
       shit.appendChild(poop);

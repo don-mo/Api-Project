@@ -38,7 +38,7 @@
       let shit = gen('div');
       shit.classList.add('container')
       let poop = gen('img');
-      const base = '/API-project/';
+      console.log("fick");
       poop.src = `african-flags/` + exchangeRates.data['' + i].country.toLowerCase() + '.png';
       poop.alt = exchangeRates.data['' + i].country;
       poop.classList.add('image');
@@ -77,7 +77,6 @@
       let shit = gen('div');
       shit.classList.add('container');
       let poop = gen('img');
-      const base = '/API-project/';
       poop.src = `african-flags/` + africaData['' + i].name.toLowerCase() + '.png';
       poop.alt = africaData['' + i].name;
       poop.classList.add('image');
